@@ -1,0 +1,34 @@
+{
+  "manifest_version": 2,
+  "name": "my-plugin",
+  "version": "0.0.1",
+  "description": "get usr mac address",
+  "icons": {
+    "16": "icons/coffee-icon-16.png",
+    "48": "icons/coffee-icon-48.png",
+    "128": "icons/coffee-icon-128.png"
+  },
+  "browser_action": {
+    "default_icon": "icons/coffee-icon-16.png",
+    "default_title": "我的插件",
+    "default_popup": "template/popup.html"
+  },
+  "background": {
+    "scripts": ["./script/background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["script/content.js"],
+      "css": ["style/style.css"]
+    },
+    {
+      "matches": ["https://www.baidu.com/"],
+      "js": ["script/other.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "web_accessible_resources": ["script/inject.js"],
+  "permissions": ["tabs"]
+}
