@@ -22,7 +22,7 @@ function sendToActiveTab(message) {
     tabs[0] &&
       !tabs[0].url.startsWith("chrome://") &&
       chrome.tabs.sendMessage(tabs[0].id, message, (res) => {
-        console.log("from active tab:", res);
+        console.log("popup received [active tab]:", res);
       });
   });
 }

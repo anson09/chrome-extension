@@ -28,7 +28,7 @@ function sendToActiveTab(message) {
     tabs[0] &&
       !tabs[0].url.startsWith("chrome://") &&
       chrome.tabs.sendMessage(tabs[0].id, message, (res) => {
-        console.log("from active tab:", res);
+        console.log("background received [active tab]:", res);
       });
   });
 }
