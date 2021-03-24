@@ -28,3 +28,14 @@ function sendToActiveTab(message) {
 }
 
 sendToActiveTab("popup message");
+
+//和本地应用通信
+
+chrome.runtime.sendNativeMessage(
+  "com.anson.chrome.get_mac_address",
+  { command: "GET_MAC_ADDRESS" },
+  function (response) {
+    document.querySelector("p").innerText =
+      "mac: " + (response.message || response.error);
+  }
+);

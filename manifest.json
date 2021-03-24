@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "my-plugin",
   "version": "0.0.1",
-  "description": "get usr mac address",
+  "description": "get user mac address",
   "homepage_url": "https://github.com/anson09/chrome-extension",
   "icons": {
     "16": "icons/coffee-icon-16.png",
@@ -33,8 +33,10 @@
   "permissions": [
     "tabs",
     "storage",
+    "cookies",
     "webRequest",
     "webRequestBlocking",
+    "nativeMessaging",
     "<all_urls>"
   ],
   "options_ui": {

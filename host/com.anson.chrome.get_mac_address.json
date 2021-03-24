@@ -1,0 +1,7 @@
+{
+  "name": "com.anson.chrome.get_mac_address",
+  "description": "chrome native messaging to get mac address",
+  "path": "HOST_PATH",
+  "type": "stdio",
+  "allowed_origins": ["chrome-extension://ikieofmcglibcjmodgdgbblacmnojndp/"]
+}
